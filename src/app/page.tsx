@@ -11,6 +11,10 @@ import { LuCross } from "react-icons/lu";
 //https://react-icons.github.io/react-icons/
 const navigation_items = [
   {
+    title:"x",
+    icon:LuCross,
+  },
+  {
     title: "Home",
     icon: MdHomeFilled,
   },
@@ -40,25 +44,22 @@ const Home = () => {
     <div className="w-full h-full flex justify-center items-center relative bg-black">
       <div className="max-w-screen-lg w-full h-full flex relative">
         {/* left sidebar*/}
-        <section className="fixed w-72 flex flex-col">
-          <Link href={"/"} className="my-4">
-            <LuCross></LuCross>
-          </Link>
+        <section className="fixed w-72 flex flex-col h-screen space-y-4 my-4">
           {navigation_items.map((item) => (
             <Link
-              className="hover:bg-white/10 transition duration-200 flex items-center justify-start w-fit space-x-2 rounded-3xl p-2 "
+              className="hover:bg-white/10 text-2xl transition duration-200 flex items-center justify-start w-fit space-x-6 rounded-3xl py-2 px-6"
               href={`/${item.title.toLowerCase}`}
               key={item.title}
             >
               <div>
                 <item.icon />
               </div>
-              <div>{item.title}</div>
+              {item.title !== "x" && <div>{item.title}</div>}
             </Link>
           ))}
         </section>
-        <main>home</main>
-        <section>right sidebar</section>
+        <main></main>
+        <section></section>
       </div>
     </div>
   );
