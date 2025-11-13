@@ -5,6 +5,8 @@ import { CiMail } from "react-icons/ci";
 import { CiBookmark } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import Link from "next/link";
+import { LuCross } from "react-icons/lu";
+
 
 //https://react-icons.github.io/react-icons/
 const navigation_items = [
@@ -39,9 +41,12 @@ const Home = () => {
       <div className="max-w-screen-lg w-full h-full flex relative">
         {/* left sidebar*/}
         <section className="fixed w-72 flex flex-col">
+          <Link href={"/"} className="my-4">
+            <LuCross></LuCross>
+          </Link>
           {navigation_items.map((item) => (
             <Link
-              className="bg-white/50 rounded-3xl p-4 flex items-center justify-center"
+              className="hover:bg-white/10 transition duration-200 flex items-center justify-start w-fit space-x-2 rounded-3xl p-2 "
               href={`/${item.title.toLowerCase}`}
               key={item.title}
             >
