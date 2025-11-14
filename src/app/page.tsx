@@ -7,6 +7,7 @@ import { CiUser } from "react-icons/ci";
 import Link from "next/link";
 import { LuCross } from "react-icons/lu";
 import { PiHouse } from "react-icons/pi";
+import { BsThreeDots } from "react-icons/bs";
 
 //https://react-icons.github.io/react-icons/
 const navigation_items = [
@@ -62,7 +63,18 @@ const Home = () => {
               Post
             </button>
           </div>
-          <div> this is bottom</div>
+          <button className="w-full flex items-center space-x-4 rounded-3xl bg-transperent px-6 py-4 text-2xl text-center hover:bg-white/10 transition duration-200 justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="rounded-full bg-slate-400 w-12 h-12"></div>
+              <div className="text-left text-sm text-white">
+                <div className="text-semibold">Thor Test</div>
+                <div className="">@thor</div>
+              </div>
+            </div>
+            <div>
+              <BsThreeDots />
+            </div>
+          </button>
         </section>
         <main></main>
         <section></section>
