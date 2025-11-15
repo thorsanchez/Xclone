@@ -4,11 +4,11 @@ import { CiSearch } from "react-icons/ci";
 
 const Home = () => {
   return (
-    <div className="w-full h-full flex justify-center items-center relative bg-black">
-      <div className="max-w-screen-xl w-full h-full flex relative">
+    <div className="w-full min-h-screen flex justify-center items-center relative bg-black">
+      <div className="max-w-[70vw] w-full flex relative border-4">
         <LeftSidebar />
         <MainComponent />
-        <section className="fixed flex flex-col space-y-4 right-0">
+        <section className="w-[30%] sticky top-0 h-screen border-4 flex flex-col items-stretch px-6">
           <div>
             <div className="relative w-full h-full">
               <div className="absolute left-0 top-0 h-full flex items-center justify-center">
