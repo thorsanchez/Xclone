@@ -21,8 +21,24 @@ const Home = () => {
               ></input>
             </div>
           </div>
-          <div></div>
-          <div></div>
+          <div className="flex flex-col rounded-xl border mt-4">
+            <h3 className="font-bold text-2xl my-2 p-2">What’s happening</h3>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="hover:bg-white/5">
+                <div className="fond-bold text-lg p-4"> trending nuna {i + 1}</div>
+                <div className="text-xs text-neutral-400 p-4">6,942 posts</div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col rounded-xl border mt-4">
+            <h3 className="font-bold text-2xl my-2 p-2">Who to follow</h3>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="hover:bg-white/5">
+                <div className="fond-bold text-lg p-4"> trending nuna {i + 1}</div>
+                <div className="text-xs text-neutral-400 p-4">6,942 posts</div>
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>
