@@ -1,5 +1,11 @@
 import LeftSidebar from "@/components/LeftSidebar";
-import { BsDot } from "react-icons/bs";
+import { BsDot, BsThreeDots } from "react-icons/bs";
+import { FaRegComment } from "react-icons/fa";
+import { BiRepost } from "react-icons/bi";
+import { FaRegHeart } from "react-icons/fa6";
+import { IoStatsChart } from "react-icons/io5";
+import { CiBookmark } from "react-icons/ci";
+import { LuShare } from "react-icons/lu";
 
 const Home = () => {
   return (
@@ -8,7 +14,9 @@ const Home = () => {
         {/* left sidebar*/}
         <LeftSidebar />
         <main className="ml-[205px] flex w-[700px] h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
-          <h1 className="text-xl font-bold my-4 p-6">home</h1>
+          <h1 className="text-xl font-bold my-4 p-6 backdrop-blur bg-white/10 sticky top-0">
+            Following
+          </h1>
           <div className="border-t-[0.5px] border-b-[0.5px] px-4 flex items-stretch space-x-2 py-6 border-gray-600 relative">
             <div className="w-10 h-10 bg-slate-400 rounded-full"></div>
             <div className="flex flex-col w-full">
@@ -34,14 +42,17 @@ const Home = () => {
                 className="border-b-[0.5px] border-gray-600 p-4 flex space-x-4"
               >
                 <div className="w-10 h-10 bg-slate-200 rounded-full flex-shrink-0"></div>
-                <div className="flex flex-col space-y-2 flex-1">
-                  <div className="flex items-center space-x-1 text-sm">
-                    <div className="font-bold">Thor test</div>
-                    <div className="text-gray-500">@thor</div>
-                    <div className="text-gray-500">
-                      <BsDot />
+                <div className="flex flex-col">
+                  <div className="flex items-center w-full justify-between">
+                    <div className="flex items-center space-x-1 w-full">
+                      <div className="font-bold">Thor test</div>
+                      <div className="text-gray-500">@thor</div>
+                      <div className="text-gray-500">
+                        <BsDot />
+                      </div>
+                      <div className="text-gray-500">1 hour ago</div>
                     </div>
-                    <div className="text-gray-500">1 hour ago</div>
+                    <div><BsThreeDots/></div>
                   </div>
                   <div className="text-white text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -49,12 +60,25 @@ const Home = () => {
                     deserunt dicta assumenda repellendus eaque laboriosam.
                   </div>
                   <div className="bg-slate-400 aspect-square w-full h-96 rounded-xl"></div>
-                  <div className="flex items-center space-x-20 w-full text-gray-500">
-                    <div>c</div>
-                    <div>r</div>
-                    <div>l</div>
-                    <div>s</div>
-                    <div>sh</div>
+                  <div className="flex items-center justify-between space-x-2 w-full text-gray-500">
+                    <div className="rounded-full hover:bg-white/50 p-3 cursor-pointer duration-200">
+                      <FaRegComment />
+                    </div>
+                    <div className="rounded-full hover:bg-white/50 p-3 cursor-pointer duration-200">
+                      <BiRepost />
+                    </div>
+                    <div className="rounded-full hover:bg-white/50 p-3 cursor-pointer duration-200">
+                      <FaRegHeart />
+                    </div>
+                    <div className="rounded-full hover:bg-white/50 p-3 cursor-pointer duration-200">
+                      <IoStatsChart />
+                    </div>
+                    <div className="rounded-full hover:bg-white/50 p-3 cursor-pointer duration-200">
+                      <CiBookmark />
+                    </div>
+                    <div className="rounded-full hover:bg-white/50 p-3 cursor-pointer duration-200">
+                      <LuShare />
+                    </div>
                   </div>
                 </div>
               </div>
