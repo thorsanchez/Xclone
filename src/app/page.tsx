@@ -21,7 +21,7 @@ const Home = () => {
               ></input>
             </div>
           </div>
-          <div className="flex flex-col rounded-xl border-l-[0.5px] border-r-[0.5px] border-gray-600 mt-4">
+          <div className="flex flex-col rounded-xl border-[0.5px] border-gray-600 mt-4">
             <h3 className="font-bold text-2xl my-2 p-2">What’s happening</h3>
             {Array.from({ length: 5 }).map((_, i) => (
               <div key={i} className="hover:bg-white/5">
@@ -33,7 +33,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col rounded-xl border-l-[0.5px] border-r-[0.5px] border-gray-600 mt-4">
+          <div className="flex flex-col rounded-xl border-[0.5px] border-gray-600 mt-4">
             <h3 className="font-bold text-2xl my-2 p-2">Who to follow</h3>
             <div>
               {Array.from({ length: 2 }).map((_, i) => (
