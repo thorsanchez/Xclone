@@ -5,10 +5,10 @@ import { CiSearch } from "react-icons/ci";
 const Home = () => {
   return (
     <div className="w-full min-h-screen flex justify-center items-center relative bg-black">
-      <div className="max-w-[70vw] w-full flex relative">
+      <div className="max-w-[80vw] w-full flex relative">
         <LeftSidebar />
         <MainComponent />
-        <section className="w-[30%] sticky top-0 mt-2 h-screen flex flex-col items-stretch px-6">
+        <section className="w-[30%] sticky bottom-0 flex flex-col items-stretch px-6">
           <div>
             <div className="relative w-full h-full">
               <div className="absolute left-0 top-0 h-full flex items-center justify-center p-4">
@@ -36,19 +36,24 @@ const Home = () => {
           <div className="flex flex-col rounded-xl border mt-4">
             <h3 className="font-bold text-2xl my-2 p-2">Who to follow</h3>
             <div>
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="hover:bg-white/5 flex items-center space-x-4 px-4 py-3">
-                <div className="w-10 h-10 bg-neutral-600 rounded-full"></div>
+              {Array.from({ length: 2 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="hover:bg-white/5 flex items-center space-x-4 px-4 py-3"
+                >
+                  <div className="w-10 h-10 bg-neutral-600 rounded-full"></div>
                   <div className="flex flex-col">
                     <div className="font-bold">Other user</div>
                     <div className="text-gray-500">@user</div>
                   </div>
                   <div className="ml-auto">
-                    <button className="rounded-full px-6 py-2 bg-white text-neutral-950">follow</button>
+                    <button className="rounded-full px-6 py-2 bg-white text-neutral-950">
+                      follow
+                    </button>
                   </div>
                 </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
         </section>
       </div>
