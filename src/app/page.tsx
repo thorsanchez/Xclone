@@ -25,19 +25,30 @@ const Home = () => {
             <h3 className="font-bold text-2xl my-2 p-2">What’s happening</h3>
             {Array.from({ length: 5 }).map((_, i) => (
               <div key={i} className="hover:bg-white/5">
-                <div className="fond-bold text-lg p-4"> trending nuna {i + 1}</div>
+                <div className="fond-bold text-lg p-4">
+                  {" "}
+                  trending nuna {i + 1}
+                </div>
                 <div className="text-xs text-neutral-400 p-4">6,942 posts</div>
               </div>
             ))}
           </div>
           <div className="flex flex-col rounded-xl border mt-4">
             <h3 className="font-bold text-2xl my-2 p-2">Who to follow</h3>
+            <div>
             {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="hover:bg-white/5">
-                <div className="fond-bold text-lg p-4"> trending nuna {i + 1}</div>
-                <div className="text-xs text-neutral-400 p-4">6,942 posts</div>
-              </div>
+              <div key={i} className="hover:bg-white/5 flex items-center space-x-4 px-4 py-3">
+                <div className="w-10 h-10 bg-neutral-600 rounded-full"></div>
+                  <div className="flex flex-col">
+                    <div className="font-bold">Other user</div>
+                    <div className="text-gray-500">@user</div>
+                  </div>
+                  <div className="ml-auto">
+                    <button className="rounded-full px-6 py-2 bg-white text-neutral-950">follow</button>
+                  </div>
+                </div>
             ))}
+          </div>
           </div>
         </section>
       </div>
