@@ -9,7 +9,7 @@ import { LuShare } from "react-icons/lu";
 
 const MainComponent = () => {
   return (
-    <main className="flex w-[60%] h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
+    <main className="flex w-[48%] h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
       <h1 className="text-xl font-bold p-6 backdrop-blur bg-white/10 sticky top-0">
         Following
       </h1>

@@ -4,11 +4,11 @@ import { CiSearch } from "react-icons/ci";
 
 const Home = () => {
   return (
-    <div className="w-full min-h-screen flex justify-center items-center relative bg-black">
+    <div className="w-full min-h-screen flex justify-center items-start relative bg-black">
       <div className="max-w-[80vw] w-full flex relative">
         <LeftSidebar />
         <MainComponent />
-        <section className="w-[30%] sticky bottom-0 flex flex-col items-stretch px-6">
+        <section className="w-[30%] sticky top-0 h-screen flex flex-col items-stretch px-6">
           <div>
             <div className="relative w-full h-full">
               <div className="absolute left-0 top-0 h-full flex items-center justify-center p-4">
@@ -21,7 +21,7 @@ const Home = () => {
               ></input>
             </div>
           </div>
-          <div className="flex flex-col rounded-xl border mt-4">
+          <div className="flex flex-col rounded-xl border-l-[0.5px] border-r-[0.5px] border-gray-600 mt-4">
             <h3 className="font-bold text-2xl my-2 p-2">What’s happening</h3>
             {Array.from({ length: 5 }).map((_, i) => (
               <div key={i} className="hover:bg-white/5">
@@ -33,7 +33,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col rounded-xl border mt-4">
+          <div className="flex flex-col rounded-xl border-l-[0.5px] border-r-[0.5px] border-gray-600 mt-4">
             <h3 className="font-bold text-2xl my-2 p-2">Who to follow</h3>
             <div>
               {Array.from({ length: 2 }).map((_, i) => (
